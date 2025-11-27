@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistente para Professores</title>
+  <link rel="stylesheet" href="estilo2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Wrapper geral: Card + Imagens lado a lado -->
+  <div class="result-wrapper">
+    
+    <!-- Caixa branca do conteúdo -->
+    <main class="card">
+      <div class="card-content">
+        <img src="logo.png" alt="Logo Governo de São Paulo" class="logo-sp" />
+        <img src="logo escola.jpg" alt="Logo E.E. Prof. Dorival Monteiro de Oliveira" class="logo-escola" />
+        <h1>      📚 Assistente para Professores</h1>
+        <p class="intro">Digite o tema da sua aula e receba um plano estruturado automaticamente!</p>
+
+        <!-- Seção de entrada -->
+        <section id="input-section" class="active">
+          <label for="topic-input">Tópico da aula:</label>
+          <textarea id="topic-input" placeholder="Ex: Revolução Industrial"></textarea>
+          <div class="action-container">
+            <button id="send-btn" type="button">✨ Gerar plano de aula</button>
+            <div class="spinner" id="loading-spinner"></div>
+          </div>
+        </section>
+      
+        <!-- Seção de resultado -->
+        <section id="result-section">
+          <button id="back-btn" type="button">← Voltar</button>
+          <h2>📑 Plano de aula sugerido:</h2>
+          <div id="response"></div>
+          
+          <div id="response"></div>
+          
+          <div class="result-actions-container">
+            <button id="copy-btn" type="button">📋 Copiar conteúdo</button>
+            <button id="listen-btn">🔊 Escutar Plano de Aula</button>
+            <button id="stop-btn">Parar Fala</button>
+            <button id="download-pdf-btn" type="button">📄 Baixar PDF</button>
+          </div>
+
+        </section>
+
+        </section>
+
+        <!-- Mensagens de erro -->
+        <div id="error-message" class="error-message"></div>
+      </div>
+    </main>
+
+    <!-- Imagens alinhadas à lateral -->
+    <aside class="pexels-images-container" id="pexels-images">
+      <!-- As imagens da API serão carregadas aqui -->
+    </aside>
+
+  </div> <!-- fim result-wrapper -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="scriptj.js"></script>
+  
+</body>
+</html>
